@@ -1,6 +1,8 @@
 ﻿# Precompiler for Kendo UI Core Templates
 
-`ktc` is a simple command line tool for precompiling kendo style templates. the tool simple outputs a 
+_note i am not in any way officially connected with KendoUI :P_
+
+`ktc` is a simple command line tool for precompiling [Kendo UI style templates](https://github.com/telerik/kendo-ui-core). the tool simple outputs a 
 javascript file that contains the compiled templates. at which point they simply need to called from you client code
 
 One upside of this method is that you don't have to use the templates for just html anymore, but any sort of templating
