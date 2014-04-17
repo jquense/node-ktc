@@ -1,0 +1,26 @@
+{
+  "name": "ktc",
+  "version": "0.0.1",
+  "description": "Precompiler for Kendo UI Core Templates",
+  "main": "index.js",
+  "bin": {
+    "ktc": ".bin/precompile.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theporchrat/"
+  },
+  "author": {
+    "name": "Jason Quense @theporchrat",
+    "email": "theporchrat@gmail.com"
+  },
+  "scripts": {
+	"templates": "node ./bin/precompile.js -i ./templates/*.kendo  -o ./lib/templates.js --cjs -d lodash:_"
+  },
+  "dependencies": {
+    "minimist": "0.0.8",
+    "lodash": "^2.4.1",
+    "uglify-js": "~2.4.13",
+    "glob": "~3.2.9"
+  }
+}

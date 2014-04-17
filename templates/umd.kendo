@@ -1,0 +1,19 @@
+﻿(function(root, factory) {
+    if(typeof exports === 'object') {
+        module.exports = factory(#= _.pluck(data.dependency, 'cjs') #);
+    }
+    else if(typeof define === 'function' && define.amd) {
+        define(#= data.amdname ? "'" + data.amdname +"', " : ''# #= data.dependency.length ? "[" + _.pluck(data.dependency, 'amd') +"], " : ''# factory);
+    }
+    else {
+        root['#= data.global #'] = factory(#= _.pluck(data.dependency, 'alias') #);
+    }
+}(this, function(#= _.pluck(data.dependency, 'alias') #) {
+
+var templates = { }; 
+# for(var key in data.templates) { #
+
+templates['#= key #'] = #= data.templates[key] #;
+# } #
+return templates;
+}));

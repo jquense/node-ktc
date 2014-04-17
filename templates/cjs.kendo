@@ -1,0 +1,10 @@
+﻿
+var templates = { }; 
+# if( data.dependency.length ) { # 
+var #= data.dependency.map(function(d, i){ return  d.alias + ' = ' + d.cjs }) #; 
+# } #
+# for(var key in data.templates) { #
+templates['#= key #'] = #= data.templates[key] #;
+# } #
+
+module.exports = templates;
