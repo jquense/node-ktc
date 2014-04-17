@@ -1,6 +1,6 @@
 {
   "name": "ktc",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Precompiler for Kendo UI Core Templates",
   "main": "index.js",
   "license": "MIT",

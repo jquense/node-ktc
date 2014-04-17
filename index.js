@@ -8,10 +8,9 @@ var _ = require('lodash')
   , path = require('path')
 
 var defaults = {
-    namespace: 'templates',
-    minify: false,
+    global: 'Templates',
+    minify:  false,
     usewith: false,
-    deps: {}
 }
 
 function processTemplate(file, useWith){
@@ -41,6 +40,8 @@ module.exports = function(files, options){
 
         return obj
     }, tmpls);
+
+    if (_.size(tmpls) === 0) return output
 
     options.dependency = splitDeps(options.dependency)
 

@@ -20,7 +20,7 @@ var args = require('minimist')(process.argv.slice(2), {
   , files, templates;
   
 
-files = [].concat( args.input )
+files = _.compact([].concat( args.input ))
     .map(function(pattern){
         return glob.sync(pattern)  
     })
@@ -29,6 +29,6 @@ files = _.flatten(files);
 
 templates = precompile(files, args);
 
-args.output 
+templates && args.output 
     ? fs.writeFileSync(args.output, templates, 'utf8')
     : process.stdout.write(templates, 'utf8')
