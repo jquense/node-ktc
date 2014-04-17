@@ -1,6 +1,6 @@
 {
   "name": "ktc",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Precompiler for Kendo UI Core Templates",
   "main": "index.js",
   "license": "MIT",
@@ -15,12 +15,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/theporchrat/kendoPrecompiler"
+    "url": "https://github.com/theporchrat/node-ktc"
   },
   "bugs": {
-    "url": "https://github.com/theporchrat/kendoPrecompiler/issues"
+    "url": "https://github.com/theporchrat/node-ktc/issues"
   },
-  "homepage": "https://github.com/theporchrat/kendoPrecompiler",
+  "homepage": "https://github.com/theporchrat/node-ktc",
   "author": {
     "name": "Jason Quense @theporchrat",
     "email": "theporchrat@gmail.com"
