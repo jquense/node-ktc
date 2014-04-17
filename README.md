@@ -5,6 +5,11 @@ javascript file that contains the compiled templates. at which point they simply
 
 One upside of this method is that you don't have to use the templates for just html anymore, but any sort of templating
  you wish, case in point internally KTC uses templates it compiled to generate new templates :P
+### Install
+
+Requires Node.js to be installed on the your system
+
+	npm install ktc
 
 ### Usage
 
@@ -51,10 +56,10 @@ All of this will wrap your compiled templates inside a umd structure like this, 
 			module.exports = factory(require('lodash'), require('kendo-core'), require('jquery'));
 		}
 		else if(typeof define === 'function' && define.amd) {
-			define('CTMS',  ['lodash','kendo-core','jquery'],  factory);
+			define(['lodash','kendo-core','jquery'],  factory);
 		}
 		else {
-			root['ctms'] = factory( _, kendo, $);
+			root['superCool'] = factory( _, kendo, $);
 		}
 	}(this, function( _, kendo, $) {
 		//compiled templates here!

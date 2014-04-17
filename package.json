@@ -1,11 +1,11 @@
 {
   "name": "ktc",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Precompiler for Kendo UI Core Templates",
   "main": "index.js",
   "license": "MIT",
   "bin": {
-    "ktc": ".bin/precompile.js"
+    "ktc": "bin/ktc"
   },
   "repository": {
     "type": "git",

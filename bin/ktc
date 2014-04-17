@@ -1,0 +1,34 @@
+#!/usr/bin/env node
+
+var args = require('minimist')(process.argv.slice(2), { 
+        alias: { 
+            cjs:        'c',
+            amd:        'a',
+            minify:     'm',
+            usewith:    'w',
+            input:      'i',
+            output:     'o',
+            amdname:    'n',
+            global:     'g',
+            dependency: 'd',
+        }
+    })
+  , _ = require('lodash')
+  , precompile = require('../index')
+  , glob = require('glob')
+  , fs = require('fs')
+  , files, templates;
+  
+
+files = [].concat( args.input )
+    .map(function(pattern){
+        return glob.sync(pattern)  
+    })
+
+files = _.flatten(files);
+
+templates = precompile(files, args);
+
+args.output 
+    ? fs.writeFileSync(args.output, templates, 'utf8')
+    : process.stdout.write(templates, 'utf8')
