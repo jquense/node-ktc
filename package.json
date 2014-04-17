@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Precompiler for Kendo UI Core Templates",
   "main": "index.js",
+  "license": "MIT",
   "bin": {
     "ktc": ".bin/precompile.js"
   },
@@ -15,7 +16,7 @@
     "email": "theporchrat@gmail.com"
   },
   "scripts": {
-	"templates": "node ./bin/precompile.js -i ./templates/*.kendo  -o ./lib/templates.js --cjs -d lodash:_"
+	"templates": "node ./bin/ktc -i ./templates/*.kendo  -o ./lib/templates.js --cjs -d lodash:_"
   },
   "dependencies": {
     "minimist": "0.0.8",
