@@ -33,7 +33,7 @@ Options:
 by default `ktc` will output a UMD wrapped file with no specified dependencies. In a traditional web
 environment where there is an implicit relience on Globals, the default should be sufficent.
 
-If you with to either explicitly state global dependencies or are working inside an AND or CommonJS/Node 
+If you with to either explicitly state global dependencies or are working inside an AMD or CommonJS/Node 
 environment, you will need to explicilty declare any dependencies.
 
 #### Dependencies
@@ -42,7 +42,7 @@ Simply include any and all deps by module name
 
 	ktc -i ./**/*.kendo -o ./templates.js -d lodash -d bluebird
 
-in most cases you will probably need to alias your deps in order to get the output you wish. 
+in some cases you will probably need to alias your deps in order to get the output you wish. 
 For example lodash is generally exposed as `_` but required like `require('lodash')`. In order 
 to handle this you can pass `:` deliminated strings as dependencies.
 
